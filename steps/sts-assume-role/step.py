@@ -25,11 +25,10 @@ response = sts.assume_role(
     RoleArn=roleARN,
     RoleSessionName=roleSessionName
 )
-temporaryAccessKeyId = response['Credentials']['AccessKeyId']
-temporarySecretAccessKey = response['Credentials']['SecretAccessKey']
-temporarySessionToken = response['Credentials']['SessionToken']
+connection = {}
+connection['accessKeyID'] = response['Credentials']['AccessKeyId']
+connection['secretAccessKey'] = response['Credentials']['SecretAccessKey']
+connection['sessionToken'] = response['Credentials']['SessionToken']
 
-print('\nAdding temporary credentials to the outputs `accessKeyID`, `secretAccessKey`, and `sessionToken`')
-relay.outputs.set('accessKeyID', temporaryAccessKeyId)
-relay.outputs.set('secretAccessKey', temporarySecretAccessKey)
-relay.outputs.set('sessionToken', temporarySessionToken)
+print('\nAdding temporary credentials to the outputs `connection`')
+relay.outputs.set('connection', connection)

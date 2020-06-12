@@ -17,11 +17,12 @@ documentation [here](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credent
 
 ## Outputs
 
-| Setting | Data type | Description | 
-|---------|-----------|-------------|
-| `accessKeyID` | string | The access key ID that identifies the temporary security credentials. |
-| `secretAccessKey` | string | The secret access key that can be used to sign requests. |
-| `sessionToken` | string | The token that users must pass to the service API to use the temporary credentials. |
+| Name | Child Output | Data type | Description | 
+|------|--------------|-----------|-------------|
+| `connection` || map | Relay connection for AWS that can be used in subsequent steps | 
+|| `accessKeyID` | string | The access key ID that identifies the temporary security credentials. |
+|| `secretAccessKey` | string | The secret access key that can be used to sign requests. |
+|| `sessionToken` | string | The token that users must pass to the service API to use the temporary credentials. |
 
 
 ## Example
@@ -42,6 +43,6 @@ steps:
 ## Example Outputs
 | Key | Value | 
 |-----|-------|
-| `accessKeyId` | `AKIAIOSFODNN7EXAMPLE` |
-| `secretAccessKey` | `wJalrXUtnFEMI/K7MDENG/bPxRfiCYzEXAMPLEKEY` |
-| `sessionToken` | `AQoDYXdzEPT//////////wEXAMPLEtc764bNrC9SAPBSM22wDOk4x4HIZ8j4FZTwdQWLWsKWHGBuFqwAeMicRXmxfpSPfIeoIYRqTflfKD8YUuwthAx7mSEI/qkPpKPi/kMcGdQrmGdeehM4IC1NtBmUpp2wUE8phUZampKsburEDy0KPkyQDYwT7WZ0wq5VSXDvp75YU9HFvlRd8Tx6q6fE8YQcHNVXAkiY9q6d+xo0rKwT38xVqr7ZD0u0iPPkUL64lIZbqBAz+scqKmlzm8FDrypNC9Yjc8fPOLn9FX9KSYvKTr4rvx3iSIlTJabIQwj2ICCR/oLxBA==` |
+| `connection.accessKeyID` | `AKIAIOSFODNN7EXAMPLE` |
+| `connection.secretAccessKey` | `wJalrXUtnFEMI/K7MDENG/bPxRfiCYzEXAMPLEKEY` |
+| `connection.sessionToken` | `AQoDYXdzEPT//////////wEXAMPLEtc764bNrC9SAPBSM22wDOk4x4HIZ8j4FZTwdQWLWsKWHGBuFqwAeMicRXmxfpSPfIeoIYRqTflfKD8YUuwthAx7mSEI/qkPpKPi/kMcGdQrmGdeehM4IC1NtBmUpp2wUE8phUZampKsburEDy0KPkyQDYwT7WZ0wq5VSXDvp75YU9HFvlRd8Tx6q6fE8YQcHNVXAkiY9q6d+xo0rKwT38xVqr7ZD0u0iPPkUL64lIZbqBAz+scqKmlzm8FDrypNC9Yjc8fPOLn9FX9KSYvKTr4rvx3iSIlTJabIQwj2ICCR/oLxBA==` |
