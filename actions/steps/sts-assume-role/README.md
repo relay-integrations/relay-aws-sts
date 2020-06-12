@@ -19,7 +19,7 @@ documentation [here](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credent
 
 | Setting | Data type | Description | 
 |---------|-----------|-------------|
-| `accessKeyId` | string | The access key ID that identifies the temporary security credentials. |
+| `accessKeyID` | string | The access key ID that identifies the temporary security credentials. |
 | `secretAccessKey` | string | The secret access key that can be used to sign requests. |
 | `sessionToken` | string | The token that users must pass to the service API to use the temporary credentials. |
 

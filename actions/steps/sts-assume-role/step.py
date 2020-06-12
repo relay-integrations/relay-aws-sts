@@ -29,7 +29,7 @@ temporaryAccessKeyId = response['Credentials']['AccessKeyId']
 temporarySecretAccessKey = response['Credentials']['SecretAccessKey']
 temporarySessionToken = response['Credentials']['SessionToken']
 
-print('\nAdding temporary credentials to the outputs `accessKeyId`, `secretAccessKey`, and `sessionToken`')
-relay.outputs.set('accessKeyId', temporaryAccessKeyId)
+print('\nAdding temporary credentials to the outputs `accessKeyID`, `secretAccessKey`, and `sessionToken`')
+relay.outputs.set('accessKeyID', temporaryAccessKeyId)
 relay.outputs.set('secretAccessKey', temporarySecretAccessKey)
 relay.outputs.set('sessionToken', temporarySessionToken)
