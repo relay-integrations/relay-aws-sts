@@ -8,7 +8,7 @@ The following are supported actions:
 
 |   Type    |  Name              |
 |-----------|--------------------|
-| Step      | [sts-assume-role](/steps/sts-assume-role)  | 
+| Step      | [aws-sts-step-assume-role](/steps/aws-sts-step-assume-role)  | 
 
 
 ## Contributing

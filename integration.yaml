@@ -44,8 +44,8 @@ owner:
   url: https://puppet.com
 
 # URL to this integration's Website. Optional.
-homepage: https://github.com/relay-integrations/aws-sts
+homepage: https://github.com/relay-integrations/relay-aws-sts
 
 # URL to this integration's source code. Optional. If the homepage is a GitHub
 # link, may be inferred automatically.
-source: git://github.com/relay-integrations/aws-sts.git
+source: git://github.com/relay-integrations/relay-aws-sts.git

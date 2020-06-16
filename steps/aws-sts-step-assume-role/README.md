@@ -1,4 +1,4 @@
-# sts-assume-role
+# aws-sts-step-assume-role
 
 This [AWS STS](https://docs.aws.amazon.com/STS/latest/APIReference/welcome.html) step container returns a set of temporary security credentials that you can use to access AWS resources that you might not normally have access to. These temporary credentials consist of an access key ID, a secret access key, and a security token. This step currently does not suport MFA. Default duration is 1 hour. 
 
@@ -31,7 +31,7 @@ documentation [here](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credent
 steps:
 # ...
 - name: assume-role
-  image: relaysh/sts-assume-role
+  image: relaysh/aws-sts-step-assume-role
   spec:
     aws:
       connection: !Connection { type: aws, name: my-aws-account }
