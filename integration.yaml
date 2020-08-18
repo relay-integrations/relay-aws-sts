@@ -22,13 +22,12 @@ version: v20200408
 
 # The shortest possible accurate description of this integration. Required. May
 # just be the name of the service.
-summary: Amazon Web Services Security Token Service 
+summary: Amazon Web Services Security Token Service
 
 # A paragraph or two describing what this integration does. Optional. Markdown.
 description: |
-    Integration with Amazon Web Services Security Token Service. AWS STS is a 
-    web service that enables you to request temporary, limited-privilege 
-    credentials for AWS Identity and Access Management (IAM) users or for 
+    AWS STS is a web service that enables you to request temporary, limited-privilege
+    credentials for AWS Identity and Access Management (IAM) users or for
     users that you authenticate (federated users).
 
 # License information. Optional. If not specified, this integration is assumed
@@ -49,3 +48,6 @@ homepage: https://github.com/relay-integrations/relay-aws-sts
 # URL to this integration's source code. Optional. If the homepage is a GitHub
 # link, may be inferred automatically.
 source: git://github.com/relay-integrations/relay-aws-sts.git
+
+tags:
+  - aws
