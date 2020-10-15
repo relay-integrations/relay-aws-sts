@@ -5,21 +5,6 @@ This [AWS STS](https://docs.aws.amazon.com/STS/latest/APIReference/welcome.html)
 For more information on requesting temporary security credentials, check out the 
 documentation [here](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_request.html#stsapi_comparison).   
 
-## Example
-
-```yaml
-steps:
-# ...
-- name: assume-role
-  image: relaysh/aws-sts-step-assume-role
-  spec:
-    aws:
-      connection: !Connection { type: aws, name: my-aws-account }
-      region: us-west-2
-    roleARN: arn:aws:iam::123456789012:role/demo
-    roleSessionName: my-session
-```
-
 ## Example Outputs
 | Key | Value | 
 |-----|-------|

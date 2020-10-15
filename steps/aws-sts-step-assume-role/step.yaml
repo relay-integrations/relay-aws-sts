@@ -46,3 +46,17 @@ schemas:
   output:
     source: file
     file: output.schema.json
+
+examples: 
+  - summary: assume an STS role
+    content: 
+      apiVersion: 1
+      kind: Step
+      name: assume-sts-role
+      image: relaysh/aws-sts-step-assume-role
+      spec: 
+        aws:
+          connection: !Connection { type: aws, name: my-aws-account }
+          region: !Parameter awsRegion
+        roleARN: !Parameter roleArn
+        roleSessionName: !Parameter roleSessionName
