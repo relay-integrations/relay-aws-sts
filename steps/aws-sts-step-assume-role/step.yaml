@@ -50,7 +50,7 @@ schemas:
 examples: 
   - summary: assume an STS role
     content: 
-      apiVersion: 1
+      apiVersion: v1
       kind: Step
       name: assume-sts-role
       image: relaysh/aws-sts-step-assume-role
