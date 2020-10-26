@@ -1,29 +1,43 @@
 {
-	"$schema": "http://json-schema.org/draft-07/schema#",
-	"type": "object",
-	"properties": {
-		"connection": {
-            "type": "object",
-            "x-relay-connectionType": "aws",
-            "description": "A Relay AWS connection to use",
-            "properties": {
-              "accessKeyID": {
-                "type": "string",
-                "description": "Access Key ID"
-              },
-              "secretAccessKey": {
-                "type": "string",
-                "description": "Secret Access Key"
-              },
-              "sessionToken": {
-                "type": "string",
-                "description":"The token that users must pass to the service API to use the temporary credentials."
-              }
-            }
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "connection": {
+      "type": "object",
+      "x-relay-connectionType": "aws",
+      "description": "A Relay AWS connection to use",
+      "properties": {
+        "accessKeyID": {
+          "type": "string",
+          "description": "The access key ID that identifies the temporary security credentials."
+        },
+        "secretAccessKey": {
+          "type": "string",
+          "description": "The secret access key that can be used to sign requests."
+        },
+        "sessionToken": {
+          "type": "string",
+          "description":"The token that users must pass to the service API to use the temporary credentials."
         }
-	},
-	"required": [
-		"connection"
-	],
-	"additionalProperties": false
+      }
+    },
+    "role": {
+      "type": "object",
+      "description": "The identifiers for the temporary security credentials that the operation returns.",
+      "properties": {
+        "assumedRoleId": {
+          "type": "string",
+          "description": "A unique identifier that contains the role ID and the role session name of the role that is being assumed."
+        },
+        "arn": {
+          "type": "string",
+          "description": "The ARN of the temporary security credentials that are returned from the AssumeRole action."
+        }
+      }
+    }
+  },
+  "required": [
+    "connection"
+  ],
+  "additionalProperties": false
 }

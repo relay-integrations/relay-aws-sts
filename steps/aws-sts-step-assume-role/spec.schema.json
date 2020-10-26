@@ -19,10 +19,14 @@
             "secretAccessKey": {
               "type": "string",
               "description": "Secret Access Key"
+            },
+            "sessionToken": {
+              "type": "string",
+              "description":"Session Token"
             }
           },
           "required": [
-            "accessKeyID", 
+            "accessKeyID",
             "secretAccessKey"
           ]
         },
