@@ -1,4 +1,4 @@
-# Amazon Web Services Security Token Service integration
+# AWS Security Token Service integration
 
 Integration with Amazon Web Services Security Token Service (STS) for Puppet Relay.
 
