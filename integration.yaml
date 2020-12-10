@@ -3,13 +3,13 @@ kind: Integration
 name: aws-sts
 channel: stable
 version: v20200408
-summary: Amazon Web Services Security Token Service
+summary: AWS Security Token Service
 license: Apache-2.0
 homepage: https://github.com/relay-integrations/relay-aws-sts
 source: git://github.com/relay-integrations/relay-aws-sts.git
 
 description: |
-    AWS STS is a web service that enables you to request temporary, limited-privilege
+    AWS Security Token Service (STS) is a web service that enables you to request temporary, limited-privilege
     credentials for AWS Identity and Access Management (IAM) users or for
     users that you authenticate (federated users).
 
